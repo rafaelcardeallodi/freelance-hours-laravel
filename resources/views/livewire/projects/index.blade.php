@@ -1,3 +1,7 @@
-<div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
+<div class="grid grid-cols-2 gap-4">
+    @foreach($this->projects as $project)
+        <a href="{{ route('projects.show', $project) }}">
+            <x-project-card-simple :$project />
+        </a>
+    @endforeach
 </div>
